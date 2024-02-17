@@ -1,6 +1,7 @@
 {
   "name": "add",
   "description": "Adds two numbers",
+  "private": true,
   "main": "src/index.ts",
   "publishConfig": {
     "main": "dist/index.js",
