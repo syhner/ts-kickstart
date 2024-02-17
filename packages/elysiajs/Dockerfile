@@ -7,15 +7,8 @@ RUN apt-get update -qq && \
 # Install dependencies only when needed
 FROM base AS deps
 WORKDIR /app
-COPY ../../bun.lockb package.json ./
-RUN bun install --ci
-
-# Build public/ files (i.e. tailwind output)
-FROM deps as build
-COPY ../../bun.lockb package.json ./
-COPY src/ ./src/
+COPY ./ ./
 RUN bun install
-RUN bun run build
 
 # Development image, copy all the files and run the server
 FROM base AS run
@@ -25,12 +18,10 @@ RUN addgroup --system --gid 1001 bunjs
 RUN adduser --system --uid 1001 elysiajs
 USER elysiajs
 # Copy files
-COPY --from=deps /app/node_modules/ ./node_modules/
-COPY src/ ./src/
-COPY package.json tsconfig.json ./
+COPY --from=deps /app/ ./
 # Set environment variables
 ENV NODE_ENV=production
 ENV PORT 3000
 ENV HOSTNAME localhost
 EXPOSE 3000
-CMD ["bun", "src/index.ts"]
+CMD ["bun", "packages/elysiajs/src/index.ts"]

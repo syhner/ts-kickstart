@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "server",
+  "name": "elysiajs",
   "private": true,
   "scripts": {
     "check-ts": "tsc --noEmit",

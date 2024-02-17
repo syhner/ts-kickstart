@@ -7,6 +7,7 @@ dotenv.config({ path: '../../.env' });
 const envSchema = z.object({
 	PORT: z.coerce.number().default(3000), // used by packages/nextjs
 	PORT_ELYSIA: z.coerce.number().default(3001), // used by packages/elysiajs
+	DB_URL: z.string().default(`${__dirname}/../../sqlite.db`), // sqlite.db at the repository root
 });
 
 export const env = {

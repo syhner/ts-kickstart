@@ -1,8 +1,23 @@
 import { Database } from 'bun:sqlite';
-import { drizzle } from 'drizzle-orm/bun-sqlite';
+import { drizzle as drizzleBunSqlite } from 'drizzle-orm/bun-sqlite';
+import { drizzle as drizzleLibSql } from 'drizzle-orm/libsql';
 import * as moviesSchemas from './schemas/movies';
+import { z } from 'zod';
 
 export const schema = { ...moviesSchemas };
 
-const sqlite = new Database(`${__dirname}/../../sqlite.db`);
-export const db = drizzle(sqlite, { schema });
+import { createClient } from '@libsql/client';
+import { env } from 'env';
+
+export const db =
+	env.NODE_ENV === 'production'
+		? drizzleLibSql(
+				createClient({
+					url: z.string().parse(env.DB_URL),
+					authToken: env.DB_TOKEN,
+				}),
+				{ schema },
+		  )
+		: drizzleBunSqlite(new Database(env.DB_URL), {
+				schema,
+		  });
