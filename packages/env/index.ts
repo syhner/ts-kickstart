@@ -5,7 +5,8 @@ import { z } from 'zod';
 dotenv.config({ path: '../../.env' });
 
 const envSchema = z.object({
-	PORT: z.coerce.number().default(3000),
+	PORT: z.coerce.number().default(3000), // used by packages/nextjs
+	PORT_ELYSIA: z.coerce.number().default(3001), // used by packages/elysiajs
 });
 
 export const env = {

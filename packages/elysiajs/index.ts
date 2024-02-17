@@ -16,7 +16,7 @@ export const server = new Elysia()
 		return movies;
 	});
 
-server.listen(env.PORT, ({ hostname, port }) => {
+server.listen(env.PORT_ELYSIA, ({ hostname, port }) => {
 	const url = env.NODE_ENV === 'production' ? 'https' : 'http';
 	console.log(`Elysia is running at ${url}://${hostname}:${port}`);
 });
