@@ -4,7 +4,7 @@
 
 Set in
 
-- `packages/env/.env` - global scope
+- `.env` - global scope
 - `packages/<package>/.env` - scoped to \<package\>
 
 Parsed in
