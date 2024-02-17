@@ -3,7 +3,7 @@
 	"name": "server",
 	"private": true,
 	"scripts": {
-		"check:ts": "tsc --noEmit",
+		"check-ts": "tsc --noEmit",
 		"dev": "bun --hot index.ts",
 		"test": "bun test",
 		"start": "bun index.ts"

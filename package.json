@@ -4,11 +4,11 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
+		"all:check-ts": "turbo run check-ts",
+		"all:dev": "turbo run dev",
+		"all:test": "turbo run test",
 		"check": "biome check .",
-		"check:apply": "biome check --apply .",
-		"check:ts": "turbo run check:ts",
-		"dev": "turbo run dev",
-		"test": "turbo run test"
+		"check:apply": "biome check --apply ."
 	},
 	"dependencies": {},
 	"devDependencies": {

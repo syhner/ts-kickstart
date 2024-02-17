@@ -2,7 +2,7 @@
 	"$schema": "https://turbo.build/schema.json",
 	"globalDependencies": ["**/.env.*local"],
 	"pipeline": {
-		"check:ts": {},
+		"check-ts": {},
 		"dev": {
 			"cache": false,
 			"persistent": true
