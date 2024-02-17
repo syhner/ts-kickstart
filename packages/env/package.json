@@ -1,0 +1,10 @@
+{
+  "name": "env",
+  "description": "Loads and parses environment variables",
+  "private": true,
+  "main": "index.ts",
+  "dependencies": {
+    "dotenv": "^16.4.4",
+    "zod": "^3.22.4"
+  }
+}

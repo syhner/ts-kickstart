@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "ts-kickstart",
+  "private": true,
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "^1.0.5"
+  },
+  "packageManager": "bun@1.0.26",
+  "workspaces": [
+    "packages/*"
+  ]
+}
