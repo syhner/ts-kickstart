@@ -1,6 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/package",
 	"name": "ts-kickstart",
+	"type": "module",
 	"private": true,
 	"scripts": {},
 	"dependencies": {},
