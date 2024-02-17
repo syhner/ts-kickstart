@@ -4,5 +4,5 @@ import * as moviesSchemas from './schemas/movies';
 
 export const schema = { ...moviesSchemas };
 
-const sqlite = new Database('../db/sqlite.db');
+const sqlite = new Database(`${__dirname}/../../sqlite.db`);
 export const db = drizzle(sqlite, { schema });
