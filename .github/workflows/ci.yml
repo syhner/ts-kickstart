@@ -23,8 +23,6 @@ jobs:
 
       - name: Test
         run: bun run all:test
-        # TODO: test coverage
-
 
       # https://github.com/syhner/ts-kickstart-test/settings/actions
       # Actions must have workflow permissions to read/write and make PRs
