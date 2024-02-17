@@ -4,12 +4,14 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
+		"all:build": "turbo run build",
 		"all:check-ts": "turbo run check-ts",
 		"all:dev": "turbo run dev",
 		"all:test": "turbo run test",
 		"check": "biome check .",
 		"check:apply": "biome check --apply .",
-		"version:bump": "changeset add"
+		"package:bump": "changeset add",
+		"package:release": "bun run all:build && changeset publish"
 	},
 	"dependencies": {},
 	"devDependencies": {
