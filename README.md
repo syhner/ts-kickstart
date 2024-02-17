@@ -44,7 +44,7 @@ bun install
 Set environment variables in `.env` (at the repository root) which will be available in all packages where this is configured
 
 ```properties
-PORT=3000
+PORT=3001
 ```
 
 ### Type-safe environment variables
@@ -55,7 +55,7 @@ Modify schema in [packages/env/index.ts](`packages/env/index.ts`)
 
 ```ts
 const envSchema = z.object({
-  PORT: z.coerce.number().default(3000),
+  PORT: z.string(),
 });
 ```
 
@@ -63,5 +63,5 @@ Import environment variables
 
 ```ts
 import { env } from 'env';
-const PORT = env.PORT; // PORT = number
+const PORT = env.PORT; // PORT: number
 ```

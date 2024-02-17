@@ -21,7 +21,7 @@ USER elysiajs
 COPY --from=deps /app/ ./
 # Set environment variables
 ENV NODE_ENV=production
-ENV PORT 3000
+ENV PORT 3001
 ENV HOSTNAME localhost
-EXPOSE 3000
+EXPOSE 3001
 CMD ["bun", "packages/elysiajs/src/index.ts"]
