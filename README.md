@@ -2,7 +2,7 @@
 
 ## Getting started
 
-Install dependencies, then run the `dev` script in all packages where a `dev` script exists
+Install dependencies with [Bun](https://bun.sh), then run the `dev` script in all packages where a `dev` script exists
 
 ```sh
 bun install
