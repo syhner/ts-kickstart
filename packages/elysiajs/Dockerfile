@@ -26,7 +26,6 @@ RUN adduser --system --uid 1001 elysiajs
 USER elysiajs
 # Copy files
 COPY --from=deps /app/node_modules/ ./node_modules/
-COPY --from=build /app/public/ ./public/
 COPY src/ ./src/
 COPY package.json tsconfig.json ./
 # Set environment variables
