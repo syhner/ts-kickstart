@@ -1,10 +1,16 @@
+import { add } from 'add';
 import { db, schema } from 'db';
-import { Elysia } from 'elysia';
+import { Elysia, t } from 'elysia';
 import { env } from 'env';
-import { logger } from 'logger';
 
 export const server = new Elysia()
 	.get('/', () => 'Hi from Elysia')
+	.get('/add', ({ query }) => add(query.num1, query.num2), {
+		query: t.Object({
+			num1: t.Numeric(),
+			num2: t.Numeric(),
+		}),
+	})
 	.get('/movies', async () => {
 		const movies = await db.select().from(schema.movies);
 		return movies;
@@ -12,5 +18,5 @@ export const server = new Elysia()
 
 server.listen(env.PORT, ({ hostname, port }) => {
 	const url = env.NODE_ENV === 'production' ? 'https' : 'http';
-	logger.info(`Elysia is running at ${url}://${hostname}:${port}`);
+	console.log(`Elysia is running at ${url}://${hostname}:${port}`);
 });

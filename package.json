@@ -8,11 +8,13 @@
 		"all:dev": "turbo run dev",
 		"all:test": "turbo run test",
 		"check": "biome check .",
-		"check:apply": "biome check --apply ."
+		"check:apply": "biome check --apply .",
+		"version:bump": "changeset add"
 	},
 	"dependencies": {},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
+		"@changesets/cli": "^2.27.1",
 		"@types/bun": "^1.0.5",
 		"turbo": "^1.12.4"
 	},

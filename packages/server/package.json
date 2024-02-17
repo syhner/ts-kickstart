@@ -9,9 +9,9 @@
 		"start": "bun index.ts"
 	},
 	"dependencies": {
+		"add": "workspace:*",
 		"db": "workspace:*",
 		"elysia": "^0.8.17",
-		"env": "workspace:*",
-		"logger": "workspace:*"
+		"env": "workspace:*"
 	}
 }

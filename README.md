@@ -4,7 +4,7 @@
 
 Set in
 
-- `.env` - global scope
+- `.env` - global scope (loaded when importing the workspace `env` package)
 - `packages/<package>/.env` - scoped to \<package\>
 
 Parsed in
