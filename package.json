@@ -5,6 +5,7 @@
   "scripts": {},
   "dependencies": {},
   "devDependencies": {
+    "@biomejs/biome": "1.5.3",
     "@types/bun": "^1.0.5"
   },
   "packageManager": "bun@1.0.26",
