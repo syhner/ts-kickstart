@@ -19,3 +19,6 @@ dist/
 # Misc
 .DS_Store
 *.pem
+
+# Turbo
+.turbo

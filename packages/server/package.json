@@ -1,12 +1,12 @@
 {
 	"$schema": "https://json.schemastore.org/package",
-	"name": "elysia",
+	"name": "server",
 	"private": true,
 	"scripts": {
-		"start": "bun index.ts",
+		"check:ts": "tsc --noEmit",
 		"dev": "bun --hot index.ts",
 		"test": "bun test",
-		"typecheck": "tsc --noEmit"
+		"start": "bun index.ts"
 	},
 	"dependencies": {
 		"db": "workspace:*",

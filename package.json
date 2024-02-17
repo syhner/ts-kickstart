@@ -3,14 +3,21 @@
 	"name": "ts-kickstart",
 	"type": "module",
 	"private": true,
-	"scripts": {},
+	"scripts": {
+		"check": "biome check .",
+		"check:apply": "biome check --apply .",
+		"check:ts": "turbo run check:ts",
+		"dev": "turbo run dev",
+		"test": "turbo run test"
+	},
 	"dependencies": {},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
-		"@types/bun": "^1.0.5"
+		"@types/bun": "^1.0.5",
+		"turbo": "^1.12.4"
 	},
 	"peerDependencies": {
-		"typescript": "^5.0.0"
+		"typescript": "~5.0.0"
 	},
 	"packageManager": "bun@1.0.26",
 	"workspaces": ["packages/*"]
