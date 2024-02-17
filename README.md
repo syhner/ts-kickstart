@@ -2,15 +2,10 @@
 
 ## Getting started
 
-Install dependencies
+Install dependencies, then run the `dev` script in all packages where a `dev` script exists
 
 ```sh
 bun install
-```
-
-Run the `dev` script in all packages where it exists
-
-```sh
 bun run all:dev
 ```
 
