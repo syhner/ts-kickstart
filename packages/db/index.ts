@@ -1,8 +1,8 @@
 import { Database } from 'bun:sqlite';
 import { drizzle as drizzleBunSqlite } from 'drizzle-orm/bun-sqlite';
 import { drizzle as drizzleLibSql } from 'drizzle-orm/libsql';
-import * as moviesSchemas from './schemas/movies';
 import { z } from 'zod';
+import * as moviesSchemas from './schemas/movies';
 
 export const schema = { ...moviesSchemas };
 
