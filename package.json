@@ -11,7 +11,7 @@
 		"check": "biome check .",
 		"check:apply": "biome check --apply .",
 		"package:bump": "changeset add",
-		"package:release": "bun run all:build && changeset publish"
+		"package:publish": "echo 'bun run all:build && changeset publish'"
 	},
 	"dependencies": {},
 	"devDependencies": {
