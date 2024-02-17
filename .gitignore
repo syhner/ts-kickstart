@@ -22,3 +22,14 @@ dist/
 
 # Turbo
 .turbo
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# Typescript
+*.tsbuildinfo

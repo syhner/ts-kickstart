@@ -10,7 +10,6 @@
     "allowImportingTsExtensions": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
-
     "resolveJsonModule": true,
 
     /* Emit */

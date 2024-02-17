@@ -1,7 +1,6 @@
 {
 	"name": "add",
 	"description": "Adds two numbers",
-	"version": "0.0.0",
 	"private": false,
 	"main": "src/index.ts",
 	"publishConfig": {
