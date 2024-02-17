@@ -1,7 +1,7 @@
 import { Elysia } from 'elysia';
-import { db, schema } from 'packages/db';
-import { env } from 'packages/env';
-import { logger } from 'packages/logger';
+import { db, schema } from 'db';
+import { env } from 'env';
+import { logger } from 'logger';
 
 export const server = new Elysia()
 	.get('/', () => 'Hi from Elysia')
