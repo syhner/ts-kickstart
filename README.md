@@ -14,6 +14,18 @@ Run the `dev` script in all packages where it exists
 bun run all:dev
 ```
 
+## Default packages
+
+```
+.
+└── packages/     - Any new projects belong here
+    ├── add/      - Package configured to be published to npm
+    ├── db/       - Database schemas and scripts
+    ├── elysiajs/ - Backend with ElysiaJS (full-stack framework)
+    ├── env/      - Type-safe environment variables
+    └── nextjs/   - Frontend with Next.js (full-stack framework)
+```
+
 ## Environment variables
 
 Any environment variables in `packages/<package>/.env` are available to the package, thanks to Bun
