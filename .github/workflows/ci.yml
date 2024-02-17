@@ -25,6 +25,9 @@ jobs:
         run: bun run all:test
         # TODO: test coverage
 
+
+      # https://github.com/syhner/ts-kickstart-test/settings/actions
+      # Actions must have workflow permissions to read/write and make PRs
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
