@@ -16,9 +16,9 @@ bun run all:dev
 └── packages/     - Any new projects belong here
     ├── add/      - Package configured to be published to npm
     ├── db/       - Database schemas and scripts
-    ├── elysiajs/ - Backend with ElysiaJS (full-stack framework)
+    ├── elysiajs/ - Backend with ElysiaJS (web framework)
     ├── env/      - Type-safe environment variables
-    └── nextjs/   - Frontend with Next.js (full-stack framework)
+    └── nextjs/   - Frontend with Next.js (web framework)
 ```
 
 ## Deployment
