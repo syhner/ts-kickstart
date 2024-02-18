@@ -33,7 +33,7 @@ bun run all:dev
 
 ## Environment variables
 
-Any environment variables in `packages/<package>/.env` are available to the package, thanks to Bun
+Any environment variables in `packages/<package>/.env` are available to the package (thanks to Bun)
 
 ### Type-safe environment variables
 
