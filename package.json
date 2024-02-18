@@ -12,13 +12,15 @@
     "check": "biome check .",
     "check:apply": "biome check --apply .",
     "package:bump": "changeset add",
-    "package:publish": "bun run all:bundle && changeset publish"
+    "package:publish": "bun run all:bundle && changeset publish",
+    "postinstall": "lefthook install"
   },
   "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
     "@changesets/cli": "^2.27.1",
     "@types/bun": "^1.0.5",
+    "lefthook": "^1.6.1",
     "turbo": "^1.12.4"
   },
   "peerDependencies": {
