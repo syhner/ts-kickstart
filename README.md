@@ -27,7 +27,7 @@ bun run all:dev
 
   [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/SthLV_?referralCode=Q9UMnd)
 
-- To Vercel - deploy [`packages/nextjs`](packages/nextjs)
+- To Vercel - deploy [`packages/nextjs`](packages/nextjs) (see the [Railway template](https://railway.app/template/SthLV_?referralCode=Q9UMnd) for required environment variables)
 
   [![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2FSyhner%2Fts-kickstart)
 
@@ -35,7 +35,7 @@ bun run all:dev
 
 Any environment variables in `packages/<package>/.env` are available to the package, thanks to Bun
 
-### Global environment variables
+### Type-safe environment variables
 
 Add the workspace `env` package
 
@@ -51,25 +51,7 @@ Install the new dependency
 bun install
 ```
 
-Set environment variables in `.env` (at the repository root) which will be available in all packages where this is configured
-
-```properties
-PORT=3001
-```
-
-### Type-safe environment variables
-
-**Pre-requisite: Global environment variables are configured in the package**
-
-Modify schema in [packages/env/index.ts](`packages/env/index.ts`)
-
-```ts
-const envSchema = z.object({
-  PORT: z.string(),
-});
-```
-
-Import environment variables
+Import environment variables (schema defined in [packages/env/index.ts](`packages/env/index.ts`))
 
 ```ts
 import { env } from 'env';
