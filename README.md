@@ -21,6 +21,16 @@ bun run all:dev
     └── nextjs/   - Frontend with Next.js (full-stack framework)
 ```
 
+## Deployment
+
+- To Railway - deploy [`packages/elysiajs`](`packages/elysiajs`) (using Docker)
+
+  [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/SthLV_?referralCode=Q9UMnd)
+
+- To Vercel - deploy [`packages/nextjs`](packages/nextjs)
+
+  [![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2FSyhner%2Fts-kickstart)
+
 ## Environment variables
 
 Any environment variables in `packages/<package>/.env` are available to the package, thanks to Bun
