@@ -27,7 +27,7 @@ bun run all:dev
 
   [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/SthLV_?referralCode=Q9UMnd)
 
-- To Vercel - deploy [`packages/nextjs`](packages/nextjs) (see the [Railway template](https://railway.app/template/SthLV_?referralCode=Q9UMnd) for required environment variables)
+- To Vercel - deploy [`packages/nextjs`](packages/nextjs) - see the [Railway template](https://railway.app/template/SthLV_?referralCode=Q9UMnd) for required environment variables (including NODE_ENV=production)
 
   [![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2FSyhner%2Fts-kickstart)
 
