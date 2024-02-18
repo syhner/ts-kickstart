@@ -1,8 +1,8 @@
+import { createClient } from '@libsql/client';
 import { drizzle } from 'drizzle-orm/libsql';
+import { env } from 'env';
 import { z } from 'zod';
 import * as moviesSchemas from './schemas/movies';
-import { createClient } from '@libsql/client';
-import { env } from 'env';
 
 export const schema = { ...moviesSchemas };
 
