@@ -13,7 +13,7 @@ const config: Parameters<typeof createClient>[0] =
 				authToken: env.DB_TOKEN,
 		  }
 		: {
-				url: 'file:drizzle/../../../sqlite.db',
+				url: 'file:../../sqlite.db',
 		  };
 
 export const db = drizzle(createClient(config), { schema });
