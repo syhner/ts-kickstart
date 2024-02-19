@@ -6,14 +6,16 @@ import * as moviesSchemas from './schemas/movies';
 
 export const schema = { ...moviesSchemas };
 
-const config: Parameters<typeof createClient>[0] =
-	env.NODE_ENV === 'production' || env.NEXT_RUNTIME === 'edge'
-		? {
-				url: z.string().parse(env.DB_URL),
-				authToken: env.DB_TOKEN,
-		  }
-		: {
-				url: 'file:../../sqlite.db',
-		  };
-
-export const db = drizzle(createClient(config), { schema });
+export const db = drizzle(
+	createClient(
+		env.NODE_ENV === 'production' || env.NEXT_RUNTIME === 'edge'
+			? {
+					url: z.string().parse(env.DB_URL),
+					authToken: env.DB_TOKEN,
+			  }
+			: {
+					url: 'file:../../sqlite.db',
+			  },
+	),
+	{ schema },
+);
