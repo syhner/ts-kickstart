@@ -23,7 +23,7 @@ bun run all:dev
 
 ## Deployment
 
-- To Railway - deploy [`packages/elysiajs`](`packages/elysiajs`) (using Docker)
+- To Railway - deploy [`packages/elysiajs`](packages/elysiajs) (using Docker)
 
   [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/SthLV_?referralCode=Q9UMnd)
 
@@ -51,7 +51,7 @@ Install the new dependency
 bun install
 ```
 
-Import environment variables (schema defined in [packages/env/index.ts](`packages/env/index.ts`))
+Import environment variables (schema defined in [packages/env/index.ts](packages/env/index.ts))
 
 ```ts
 import { env } from 'env';
