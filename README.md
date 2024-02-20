@@ -37,15 +37,13 @@ Any environment variables in `packages/<package>/.env` are available to the pack
 
 ### Type-safe environment variables
 
-Add the workspace `env` package
+If not already present in the package, add the [workspace env package](packages/env) and install the new dependency
 
 ```diff
   "dependencies": {
 +   "env": "workspace:*"
   }
 ```
-
-Install the new dependency
 
 ```sh
 bun install
